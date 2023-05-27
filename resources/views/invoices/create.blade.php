@@ -5,7 +5,7 @@
 
     <div class="row">
         <div class="col">
-            <a href="{{ route('invoices.index') }}" class="btn btn-secondary"><i class='bx bx-arrow-back'></i> Regresar</a>
+            @include('layouts.partials.btn-back')
         </div>
 
         <div class="col-md-4">

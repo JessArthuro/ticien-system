@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Detalles de la factura: {{ $invoice->folio }}</h1>
-    <a href="{{ route('invoices.index') }}" class="btn btn-secondary"><i class='bx bx-arrow-back'></i> Regresar</a>
+    @include('layouts.partials.btn-back')
 
     <div class="row mt-4">
         <div class="col-md-6">

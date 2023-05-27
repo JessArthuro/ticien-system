@@ -2,7 +2,8 @@
 
 @section('content')
     <h1>Editar Factura</h1>
-    <a href="{{ route('invoices.index') }}" class="btn btn-secondary"><i class='bx bx-arrow-back'></i> Regresar</a>
+    @include('layouts.partials.btn-back')
+
 
     <div class="mt-4">
         @include('layouts.partials.messages')
