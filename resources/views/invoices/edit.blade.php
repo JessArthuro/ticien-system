@@ -23,15 +23,15 @@
             <label class="form-label text-capitalize">Folio</label>
             <input name="folio" type="text" class="form-control" value="{{ $invoice->folio }}">
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4 col-lg-3">
             <label class="form-label text-capitalize">Fecha</label>
             <input name="fecha" type="text" class="form-control" value="{{ $invoice->fecha }}">
         </div>
-        <div class="col-md-2">
+        <div class="col-md-3 col-lg-2">
             <label class="form-label text-capitalize">Forma De Pago</label>
             <input name="forma_pago" type="text" class="form-control" value="{{ $invoice->forma_pago }}">
         </div>
-        <div class="col-md-2">
+        <div class="col-md-3 col-lg-2">
             <label class="form-label text-capitalize">Metodo de pago</label>
             <input name="metodo_pago" type="text" class="form-control" value="{{ $invoice->metodo_pago }}">
         </div>
@@ -55,15 +55,15 @@
         </div>
 
         {{-- Linea 3 --}}
-        <div class="col-md-3">
+        <div class="col-md-2 col-lg-2">
             <label class="form-label text-capitalize">Moneda</label>
             <input name="moneda" type="text" class="form-control" value="{{ $invoice->moneda }}">
         </div>
-        <div class="col-md-2">
+        <div class="col-md-3 col-lg-2">
             <label class="form-label text-capitalize">Tipo de cambio</label>
             <input name="tipo_cambio" type="text" class="form-control" value="{{ $invoice->tipo_cambio }}">
         </div>
-        <div class="col-md-2">
+        <div class="col-md-4 col-lg-3">
             <label class="form-label text-capitalize">Tipo de comprobante</label>
             <input name="tipo_comprobante" type="text" class="form-control" value="{{ $invoice->tipo_comprobante }}">
         </div>
@@ -77,11 +77,11 @@
         </div>
 
         {{-- Linea 4 --}}
-        <div class="col-md-6">
+        <div class="col-md-12 col-lg-6">
             <label class="form-label text-capitalize">Certificado</label>
             <textarea name="certificado" class="form-control" rows="5">{{ $invoice->certificado }}</textarea>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12 col-lg-6">
             <label class="form-label text-capitalize">Sello</label>
             <textarea name="sello" class="form-control" rows="5">{{ $invoice->sello }}</textarea>
         </div>
@@ -128,7 +128,7 @@
 
         {{-- -------------------------------------------  SECTION CONCEPTO  ------------------------------------ --}}
         <h3 class="border-top pt-3 mt-5">Concepto</h3>
-        <div class="col-md-3">
+        <div class="col-md-4 col-lg-3">
             <label class="form-label text-capitalize">Clave de producto / servicio</label>
             <input name="clave_prod_serv" type="text" class="form-control" value="{{ $invoice->clave_prod_serv }}">
         </div>
@@ -136,11 +136,11 @@
             <label class="form-label text-capitalize">Clave Unidad</label>
             <input name="clave_unidad" type="text" class="form-control" value="{{ $invoice->clave_unidad }}">
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2 col-lg-3">
             <label class="form-label text-capitalize">Cantidad</label>
             <input name="cantidad" type="text" class="form-control" value="{{ $invoice->cantidad }}">
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-lg-3">
             <label class="form-label text-capitalize">Unidad</label>
             <input name="unidad" type="text" class="form-control" value="{{ $invoice->unidad }}">
         </div>
@@ -214,11 +214,11 @@
             <input name="no_cert_sat" type="text" class="form-control" value="{{ $invoice->no_cert_sat }}">
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-12 col-lg-6">
             <label class="form-label text-capitalize">Sello CFD</label>
             <textarea name="sello_cfd" class="form-control" rows="5">{{ $invoice->sello_cfd }}</textarea>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12 col-lg-6">
             <label class="form-label text-capitalize">Sello SAT</label>
             <textarea name="sello_sat" class="form-control" rows="5">{{ $invoice->sello_sat }}</textarea>
         </div>

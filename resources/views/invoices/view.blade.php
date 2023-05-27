@@ -65,42 +65,44 @@
     </div>
 
     <h3 class="my-4">Concepto</h3>
-    <table class="table table-bordered">
-        <thead class="bg-dark-subtle">
-            <tr>
-                <td class="fw-semibold">Clave del producto y/o servicio</td>
-                <td class="fw-semibold">No. Identificacion</td>
-                <td class="fw-semibold">Cantidad</td>
-                <td class="fw-semibold">Clave de unidad</td>
-                <td class="fw-semibold">Unidad</td>
-                <td class="fw-semibold">Valor unitario</td>
-                <td class="fw-semibold">Importe</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{ $invoice->clave_prod_serv }}</td>
-                <td>{{ $invoice->no_identificacion }}</td>
-                <td>{{ $invoice->cantidad }}</td>
-                <td>{{ $invoice->clave_unidad }}</td>
-                <td>{{ $invoice->unidad }}</td>
-                <td>{{ $invoice->valor_unitario }}</td>
-                <td>{{ $invoice->importe_concepto }}</td>
-            </tr>
-            <tr>
-                <td class="bg-dark-subtle fw-semibold">Descripcion</td>
-                <td colspan="6">{{ $invoice->descripcion }}</td>
-            </tr>
-            <tr>
-                <td colspan="6" class="text-end fw-semibold">Subtotal</td>
-                <td>{{ $invoice->subtotal }}</td>
-            </tr>
-            <tr>
-                <td colspan="6" class="text-end fw-semibold">Total</td>
-                <td>{{ $invoice->total }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="bg-dark-subtle">
+                <tr>
+                    <td class="fw-semibold">Clave del producto y/o servicio</td>
+                    <td class="fw-semibold">No. Identificacion</td>
+                    <td class="fw-semibold">Cantidad</td>
+                    <td class="fw-semibold">Clave de unidad</td>
+                    <td class="fw-semibold">Unidad</td>
+                    <td class="fw-semibold">Valor unitario</td>
+                    <td class="fw-semibold">Importe</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ $invoice->clave_prod_serv }}</td>
+                    <td>{{ $invoice->no_identificacion }}</td>
+                    <td>{{ $invoice->cantidad }}</td>
+                    <td>{{ $invoice->clave_unidad }}</td>
+                    <td>{{ $invoice->unidad }}</td>
+                    <td>{{ $invoice->valor_unitario }}</td>
+                    <td>{{ $invoice->importe_concepto }}</td>
+                </tr>
+                <tr>
+                    <td class="bg-dark-subtle fw-semibold">Descripcion</td>
+                    <td colspan="6">{{ $invoice->descripcion }}</td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="text-end fw-semibold">Subtotal</td>
+                    <td>{{ $invoice->subtotal }}</td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="text-end fw-semibold">Total</td>
+                    <td>{{ $invoice->total }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 
     <div class="row mt-5">

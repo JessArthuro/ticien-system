@@ -23,7 +23,7 @@ class LoginController extends Controller
     $credentials = $request->getCredentials();
 
     if (!Auth::validate($credentials)) {
-      return redirect('/login')->withErrors('El correo electrónico y/o contraseña son incorrectos.');
+      return redirect('/')->withErrors('El correo electrónico y/o contraseña son incorrectos.');
     }
 
     $user = Auth::getProvider()->retrieveByCredentials($credentials);

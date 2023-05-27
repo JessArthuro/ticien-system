@@ -11,7 +11,7 @@
         <div class="col-md-4">
             <form action="/load_xml" method="POST" enctype="multipart/form-data">
                 @csrf
-                <label for="formFileSm" class="form-label">Sube tu archivo XML</label>
+                <label for="formFileSm" class="form-label">Selecciona tu archivo XML</label>
                 <input class="form-control form-control-sm mb-3" id="formFileSm" type="file" name="data_xml"
                     onchange="verifyInput(this)" accept="text/xml">
                 <button type="submit" class="btn btn-success" id="btn-upload" disabled><i class='bx bxs-file-export'></i>
@@ -34,15 +34,15 @@
                     <label class="form-label text-capitalize">Folio</label>
                     <input name="folio" type="text" class="form-control" value="{{ $comp['Folio'] }}" readonly>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4 col-lg-3">
                     <label class="form-label text-capitalize">Fecha</label>
                     <input name="fecha" type="text" class="form-control" value="{{ $comp['Fecha'] }}" readonly>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-lg-2">
                     <label class="form-label text-capitalize">Forma De Pago</label>
                     <input name="forma_pago" type="text" class="form-control" value="{{ $comp['FormaPago'] }}" readonly>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-lg-2">
                     <label class="form-label text-capitalize">Metodo de pago</label>
                     <input name="metodo_pago" type="text" class="form-control" value="{{ $comp['MetodoPago'] }}"
                         readonly>
@@ -69,16 +69,16 @@
                 </div>
 
                 {{-- Linea 3 --}}
-                <div class="col-md-3">
+                <div class="col-md-2 col-lg-2">
                     <label class="form-label text-capitalize">Moneda</label>
                     <input name="moneda" type="text" class="form-control" value="{{ $comp['Moneda'] }}" readonly>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-lg-2">
                     <label class="form-label text-capitalize">Tipo de cambio</label>
                     <input name="tipo_cambio" type="text" class="form-control" value="{{ $comp['TipoCambio'] }}"
                         readonly>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4 col-lg-3">
                     <label class="form-label text-capitalize">Tipo de comprobante</label>
                     <input name="tipo_comprobante" type="text" class="form-control"
                         value="{{ $comp['TipoDeComprobante'] }}" readonly>
@@ -95,11 +95,11 @@
                 </div>
 
                 {{-- Linea 4 --}}
-                <div class="col-md-6">
+                <div class="col-md-12 col-lg-6">
                     <label class="form-label text-capitalize">Certificado</label>
                     <textarea name="certificado" class="form-control" readonly>{{ $comp['Certificado'] }}</textarea>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12 col-lg-6">
                     <label class="form-label text-capitalize">Sello</label>
                     <textarea name="sello" class="form-control" readonly>{{ $comp['Sello'] }}</textarea>
                 </div>
@@ -153,7 +153,7 @@
 
             <h3 class="border-top pt-3 mt-5">Concepto</h3>
             @foreach ($concepto as $cto)
-                <div class="col-md-3">
+                <div class="col-md-4 col-lg-3">
                     <label class="form-label text-capitalize">Clave de producto / servicio</label>
                     <input name="clave_prod_serv" type="text" class="form-control"
                         value="{{ $cto['ClaveProdServ'] }}" readonly>
@@ -163,11 +163,11 @@
                     <input name="clave_unidad" type="text" class="form-control" value="{{ $cto['ClaveUnidad'] }}"
                         readonly>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2 col-lg-3">
                     <label class="form-label text-capitalize">Cantidad</label>
                     <input name="cantidad" type="text" class="form-control" value="{{ $cto['Cantidad'] }}" readonly>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-lg-3">
                     <label class="form-label text-capitalize">Unidad</label>
                     <input name="unidad" type="text" class="form-control" value="{{ $cto['Unidad'] }}" readonly>
                 </div>
@@ -252,11 +252,11 @@
                         value="{{ $tfd['NoCertificadoSAT'] }}" readonly>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-12 col-lg-6">
                     <label class="form-label text-capitalize">Sello CFD</label>
                     <textarea name="sello_cfd" class="form-control" readonly>{{ $tfd['SelloCFD'] }}</textarea>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12 col-lg-6">
                     <label class="form-label text-capitalize">Sello SAT</label>
                     <textarea name="sello_sat" class="form-control" readonly>{{ $tfd['SelloSAT'] }}</textarea>
                 </div>

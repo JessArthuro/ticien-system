@@ -19,7 +19,7 @@ class InvoiceController extends Controller
       return redirect('/');
     }
 
-    $invoices = Invoice::latest()->paginate(10);
+    $invoices = Invoice::latest()->paginate(5);
     return view('invoices.index', ['invoices' => $invoices]);
   }
 
@@ -42,7 +42,7 @@ class InvoiceController extends Controller
   {
     // dd($request->all());
     Invoice::create($request->all());
-    return redirect()->route('invoices.index')->with('success', 'Factura creada exitosamente.');
+    return redirect()->route('invoices.index')->with('create', 'ok');
   }
 
   /**
@@ -76,7 +76,7 @@ class InvoiceController extends Controller
   {
     // dd($request->all());
     $invoice->update($request->validated());
-    return redirect()->route('invoices.index')->with('success', 'Factura actualizada exitosamente');
+    return redirect()->route('invoices.index')->with('update', 'ok');
   }
 
   /**
@@ -85,6 +85,7 @@ class InvoiceController extends Controller
   public function destroy(Invoice $invoice): RedirectResponse
   {
     $invoice->delete();
-    return redirect()->route('invoices.index')->with('success', 'Factura eliminada exitosamente');
+    // return redirect()->route('invoices.index')->with('success', 'Factura eliminada exitosamente');
+    return redirect()->route('invoices.index')->with('delete', 'ok');
   }
 }
